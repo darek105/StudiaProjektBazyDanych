@@ -19,10 +19,10 @@ if(isset($_SESSION['user_session'])!="")
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>LOGIN</title>
-<script type="text/javascript" src="jquery-1.11.3-jquery.min.js"></script>
-<script type="text/javascript" src="validation.min.js"></script>
-<link href="style.css" rel="stylesheet" type="text/css" media="screen">
-<link rel="stylesheet" href="master.css">
+<script type="text/javascript" src="js/jquery-1.11.3-jquery.min.js"></script>
+<script type="text/javascript" src="js/validation.min.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="screen">
+<link rel="stylesheet" href="css/master.css">
 
 
 </head>
@@ -66,7 +66,7 @@ if(isset($_SESSION['user_session'])!="")
 		</div>
 </section>
 
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 
 
 </body>

@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Montserrat-Regular';
-  src: url("Montserrat-Regular.otf");
+  src: url("../fonts/Montserrat-Regular.otf");
 }
 
 @font-face {
   font-family: 'Bikinis';
-  src: url("Bikinis.ttf");
+  src: url("../fonts/Bikinis.ttf");
 }
 
 .for_center, body, .wrapper, .title_panel, .box-from, form, #login, #password, #checkbox-custom {

@@ -19,7 +19,7 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>PANEL ADMIN</title>
 <!-- <link href="style.css" rel="stylesheet" media="screen"> -->
-<link rel="stylesheet" href="master_sys.css">
+<link rel="stylesheet" href="css/master_sys.css">
 
 </head>
 
@@ -329,8 +329,8 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 	</div>
 </section>
 
-<script type="text/javascript" src="jquery-1.11.3-jquery.min.js"></script>
-<script type="text/javascript" src="validation.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.3-jquery.min.js"></script>
+<script type="text/javascript" src="js/validation.min.js"></script>
 <script type="text/javascript">
 
 function checkPreson() {
@@ -346,7 +346,7 @@ function checkPreson() {
 $('#formToChangeDane input').eq(1).val("<?php echo $row['PESEL']; ?>");
 
 </script>
-<script src="custom_js.js" charset="utf-8"></script>
+<script src="js/custom_js.js" charset="utf-8"></script>
 
 </body>
 </html>
