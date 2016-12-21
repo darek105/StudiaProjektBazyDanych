@@ -45,8 +45,8 @@ $('document').ready(function() {
             success: function(response) {
                 if (response == "ok") {
                     $("#submit span").show();
-                    $("#submit").html('<img style="margin-top:20px;" src="btn-ajax-loader.gif" />');
-                    setTimeout(' window.location.href = "home.php"; ', 4000);
+                    $("#submit").html('<img style="margin-top:20px;" src="img/btn-ajax-loader.gif" />');
+                    setTimeout(' window.location.href = "home.php"; ', 3000);
                 } else {
                     $("#submit span").hide();
                     $("#submit input").show();

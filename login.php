@@ -24,7 +24,7 @@
 		$user_password = trim($_POST['password']);
 
 		$password = $user_password;
-		// $password = 'test';
+		$password = 'test';
 
 		try
 		{

@@ -435,40 +435,41 @@ if(isset($_POST['formToChangeDane']))
 		echo $e->getMessage();
 	}
 }
-dodajPracownika
+// dodajPracownika
 
 if(isset($_POST['dodajPracownika']))
 {
 	try
 	{
 
-			$imie = $_POST['imie'];
-			$nazwisko = $_POST['nazwisko'];
-			$stanowisko = $_POST['stanowisko'];
-			$pesel = $_POST['pesel'];
+			$imie = trim($_POST['imie']);
+			$nazwisko = trim($_POST['nazwisko']);
+			$stanowisko = trim($_POST['stanowisko']);
+			$pesel = trim($_POST['pesel']);
 			$telefon = $_POST['telefon'];
 			$oddzial = $_POST['oddzial'];
-			$haslo = $_POST['haslo'];
+			$haslo = $_POST['hasło'];
 
 
 			$db_con = new PDO("mysql:host={$db_host};dbname={$db_name}",$db_user,$db_pass);
-			$stmt = $db_con->prepare("INSERT INTO REGISTRY (PESEL, IMIĘ, NAZWISKO, STANOWISKO, TELEFON, ID_ODDZIAŁU, HASŁO) VALUES (:pesel, :imie, :nazwisko, :stanowisko, :telefon, :oddzial, :haslo)");
+			$db_con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$stmt = $db_con->prepare("INSERT INTO pracownicy (PESEL, IMIĘ, NAZWISKO, STANOWISKO, TELEFON, ID_ODDZIAŁU, HASŁO) VALUES (:pesel, :imie, :nazwisko, :stanowisko, :telefon, :oddzial, :haslo)");
 			$stmt->execute(array(":pesel"=>$pesel, ':imie'=>$imie, ':nazwisko'=>$nazwisko, ':stanowisko'=>$stanowisko, ':telefon'=>$telefon, ':oddzial'=>$oddzial, ':haslo'=>$haslo));
 			$row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
-			$stmt1 = $db_con->prepare("SELECT NAZWISKO FROM pracownicy WHERE PESEL=:pesel");
+			$stmt1 = $db_con->prepare("SELECT * FROM pracownicy WHERE PESEL=:pesel");
 			$stmt1->execute(array(":pesel"=>$pesel));
 			$row1 = $stmt1->fetch(PDO::FETCH_ASSOC);
 			$count1 = $stmt1->rowCount();
 
-			if($row1['NAZWISKO']==$nazwisko){
+			if($row1['NAZWISKO'] == $nazwisko){
 
 				echo "OK"; // log in
 			}
 			else{
 
-				echo "Login lub hasło niepoprawne"; // wrong details
+				echo "NIE DODANO"; // wrong details
 			}
 
 
