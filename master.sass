@@ -1,0 +1,146 @@
+@font-face
+  font-family: 'Montserrat-Regular'
+  src: url('Montserrat-Regular.otf')
+
+@font-face
+  font-family: 'Bikinis'
+  src: url('Bikinis.ttf')
+
+.for_center
+  display: flex
+  justify-content: center
+  align-items: center
+
+body
+  margin: 0
+  padding: 0
+  background: url(img/bg.jpg)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  @extend .for_center
+  flex-direction: column
+  height: 100vh
+  font-family: 'Montserrat-Regular'
+
+.wrapper
+  width: 350px
+  height: 450px
+  @extend .for_center
+  flex-direction: column
+
+// .border
+//   padding: 10px
+//   border: 8px solid #FFFFFF
+
+.form
+  width: 300px
+  height: 350px
+  background: rgba(52,74,95, 0.95)
+  margin-top: 30px
+
+h4
+  margin: 0
+  color: white
+  text-transform: uppercase
+
+.title
+  color: #FFFFFF
+  font-size: 16pt
+  font-weight: 700
+  font-style: italic
+  h1::first-letter
+    font-size: 32pt
+
+.title_panel
+    height: 45px
+    background: rgba(44,61,78,0.9)
+    @extend .for_center
+
+.box-from
+  height: 88%
+  @extend .for_center
+
+form
+  height: 350px
+  @extend .for_center
+  flex-direction: column
+
+#login
+  @extend .for_center
+  flex-direction: column
+  align-items: flex-start
+  color: #FFFFFF
+  input
+    width: 200px
+    height: 30px
+    margin-top: 4px
+    border: none
+    border-radius: 0px
+    padding-left: 10px
+    font-family: inherit
+    background: rgba(44,61,78,0.8)
+    color: white
+
+#password
+  @extend #login
+  margin-top: 30px
+
+input[type*="submit"]
+  margin-top: 30px
+  width: 100px
+  background: #32C5D2
+  height: 40px
+  font-family: inherit
+  color: white
+  border: none
+  transition: background-color 0.5s ease;
+  &:hover
+    background: #3598DC
+
+#checkbox-custom
+  @extend .for_center
+  flex-direction: row
+  margin: 10px 0 0 0
+  input
+    width: 20px
+    margin: 0
+  label
+    margin: 0
+
+#remember
+  font-size: 10pt
+  margin-top: 14px
+  transition: color 0.5s ease;
+  cursor: pointer
+  &:hover
+    color: #FFF
+
+// .effect
+//     position: relative
+//     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+//        -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+//             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+//
+// .effect:before, .effect:after
+//     content: "";
+//     position: absolute;
+//     z-index: -1;
+//     -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.8);
+//     -moz-box-shadow: 0 0 20px rgba(0,0,0,0.8);
+//     box-shadow: 0 0 20px rgba(0,0,0,0.8);
+//     top: 50%;
+//     bottom: 0;
+//     left: 10px;
+//     right: 10px;
+//     -moz-border-radius: 100px / 10px;
+//     border-radius: 100px / 10px;
+//
+// .effect:after
+//     right: 10px
+//     left: auto
+//     -webkit-transform: skew(8deg) rotate(3deg)
+//        -moz-transform: skew(8deg) rotate(3deg)
+//         -ms-transform: skew(8deg) rotate(3deg)
+//          -o-transform: skew(8deg) rotate(3deg)
+//             transform: skew(8deg) rotate(3deg)

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="master_sys.css" media="screen" title="no title">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <section>
+        <div class="wrapper-menu-left">
+            <div class="menu_header">
+                <div class="search">
+                    <img src="img/search.png" alt="" />
+                    <input type="text" name="search" placeholder="Search">
+                </div>
+                <div class="user">
+                    <img src="img/avatar.png" alt="" />
+                    <h1>Name User</h1>
+                </div>
+                <div class="menu_item">
+                    <div class="line-style-black">
+                        <h1>MENU</h1>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#"><img src="img/home.png" alt="" />HOME</a>
+                        </li>
+                        <li class="li-drop">
+                            <a href="#"><img src="img/project.png" alt="" />PROJEKTY</a>
+                            <ul class="menu_drop">
+                                <li>
+                                    <a href="#"><img src="img/pencil.png" alt="" />PROJEKT 1</a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/pencil.png" alt="" />PROJEKT 2</a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/pencil.png" alt="" />PROJEKT 3</a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/pencil.png" alt="" />PROJEKT 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/test.png" alt="" />TESTY</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/team.png" alt="" />TEAM</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/wiadomosci.png" alt="" />WIADOMOŚCI</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/profil.png" alt="" />PROFIL</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/ustawienia.png" alt="" />USTAWIENIA</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrapper-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="suites">
+                            <div class="box_header_text">
+                                <h1>360</h1>
+                                <h1>TOTAL SUITES</h1>
+                            </div>
+                            <div class="box_header_img">
+                                <img src="img/suites.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="tests">
+                            <div class="box_header_text">
+                                <h1>4675</h1>
+                                <h1>TOTAL TESTS</h1>
+                            </div>
+                            <div class="box_header_img">
+                                <img src="img/test_panel.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="failed">
+                            <div class="box_header_text">
+                                <h1>3</h1>
+                                <h1>FAILED</h1>
+                            </div>
+                            <div class="box_header_img">
+                                <img src="img/failed.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="success">
+                            <div class="box_header_text">
+                                <h1>673</h1>
+                                <h1>SUCCESSS</h1>
+                            </div>
+                            <div class="box_header_img">
+                                <img src="img/success.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 margin-top-40">
+                    <div id="wykres_slupkowy">
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr >
+                                    <th>#</th>
+                                    <th>SUITES</th>
+                                    <th>WYNIK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-success">
+                                    <th scope="row">1</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                                <tr class="bg-success">
+                                    <th scope="row">2</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                                <tr class="bg-success">
+                                    <th scope="row">3</th>
+                                    <td>Suites pewnie jakiś wynik lub inny wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                                <tr class="bg-danger" >
+                                    <th scope="row">4</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>FAILED</td>
+                                </tr>
+                                <tr class="bg-danger" >
+                                    <th scope="row">5</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>FAILED</td>
+                                </tr>
+                                <tr class="bg-success" >
+                                    <th scope="row">6</th>
+                                    <td>Suites pewnie jakiś wynik</td>
+                                    <td>SUCCESS</td>
+                                </tr>
+                                <tr class="bg-warning">
+                                    <th scope="row">7</th>
+                                    <td>Suites coś poszło nie tak</td>
+                                    <td>WARNING</td>
+                                </tr>
+                                <tr class="bg-warning">
+                                    <th scope="row">8</th>
+                                    <td>Suites coś poszło nie tak</td>
+                                    <td>WARNING</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="exTab1">
+                        <ul class="nav nav-pills">
+                            <li class="active">
+                                <a href="#1a" data-toggle="tab">PROJEKT 1</a>
+                            </li>
+                            <li><a href="#2a" data-toggle="tab">PROJEKT 2</a>
+                            </li>
+                            <li><a href="#3a" data-toggle="tab">PROJEKT 3</a>
+                            </li>
+                            <li><a href="#4a" data-toggle="tab">PROJEKT 4</a>
+                            </li>
+                            <li><a href="#5a" data-toggle="tab">PROJEKT 5</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content clearfix">
+                            <div class="tab-pane active" id="1a">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div id="projekt1">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="2a">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div id="projekt2">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="3a">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div id="projekt3">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="4a">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div id="projekt4">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="5a">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div id="projekt5">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="wykres_kolowy" style="width:100%; height:400px;"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery-1.11.0.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap.min.js"></script>
+    <script src="highcharts.js"></script>
+    <script src="highcharts-3d.js"></script>
+    <!-- <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="http://code.highcharts.com/adapters/standalone-framework.js"></script> -->
+    <script src="progressbar.js" charset="utf-8"></script>
+    <script src="custom_js.js" charset="utf-8"></script>
+</body>
+
+</html>
