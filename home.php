@@ -321,6 +321,7 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 									<input type="submit" name="dodajPracownika" value="DODAJ OSOBE">
 								</div>
 							</form>
+							<span id="okAddPreson"></span>
 						</div>
 					</div>
 
