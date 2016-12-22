@@ -455,8 +455,6 @@ if(isset($_POST['dodajPracownika']))
 			$db_con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$stmt = $db_con->prepare("INSERT INTO pracownicy (PESEL, IMIĘ, NAZWISKO, STANOWISKO, TELEFON, ID_ODDZIAŁU, HASŁO) VALUES (:pesel, :imie, :nazwisko, :stanowisko, :telefon, :oddzial, :haslo)");
 			$stmt->execute(array(":pesel"=>$pesel, ':imie'=>$imie, ':nazwisko'=>$nazwisko, ':stanowisko'=>$stanowisko, ':telefon'=>$telefon, ':oddzial'=>$oddzial, ':haslo'=>$haslo));
-			$row = $stmt->fetch(PDO::FETCH_ASSOC);
-
 
 			$stmt1 = $db_con->prepare("SELECT * FROM pracownicy WHERE PESEL=:pesel");
 			$stmt1->execute(array(":pesel"=>$pesel));
