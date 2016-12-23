@@ -12,6 +12,7 @@ body {
   justify-content: flex-start;
   flex-direction: row;
   overflow-x: hidden;
+  background: url(../img/bg3.jpg);
 }
 
 @media (max-width: 1372px) {
@@ -732,4 +733,14 @@ label.error {
   margin: 15px auto;
   text-align: center;
   display: block;
+}
+
+#home {
+  font-family: 'NotoSans';
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-top: 100px;
 }

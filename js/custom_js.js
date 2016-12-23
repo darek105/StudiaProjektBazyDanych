@@ -11,6 +11,7 @@ $('#team').hide();
 $('#profil').hide();
 $('.team-details').hide();
 $('.content').children().hide();
+$('#home').show();
 $('#profil-admin').hide();
 
 $(document).ready(function() {
@@ -19,6 +20,11 @@ $(document).ready(function() {
 
     var width = $(window).width() - 210;
     $('.content').css('width', width);
+
+    $('li').eq(0).on('click', (arguments) => {
+        $('#home').show();
+        $('#home').siblings().hide();
+    });
 
     $('li').eq(1).on('click', (arguments) => {
         $('#id_produkt').show();
@@ -36,7 +42,7 @@ $(document).ready(function() {
         $('#team').siblings().hide();
     });
 
-    $('li').eq(8).on('click', (arguments) => {
+    $('li').eq(7).on('click', (arguments) => {
         $('#profil').show();
         $('#profil').siblings().hide();
     });

@@ -46,34 +46,28 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 												<a href="#"><img src="img/home.png" alt="" />HOME</a>
 										</li>
 										<li>
-												<a href="#"><img src="img/project.png" alt="" />PRODUKTY</a>
+												<a href="#"><img src="img/product.png" alt="" />PRODUKTY</a>
 										</li>
 										<li class="premium-menu">
-												<a href="#"><img src="img/project.png" alt="" />DODAJ PRODUKTY</a>
+												<a href="#"><img src="img/dodaj.png" alt="" />DODAJ PRODUKTY</a>
 										</li>
 										<li>
-												<a href="#"><img src="img/project.png" alt="" />PACZKI</a>
+												<a href="#"><img src="img/paczki.png" alt="" />PACZKI</a>
 										</li>
 										<li class="premium-menu">
-												<a href="#"><img src="img/project.png" alt="" />DODAJ PACZKE</a>
+												<a href="#"><img src="img/dodaj.png" alt="" />DODAJ PACZKE</a>
 										</li>
 										<li >
 												<a href="#"><img src="img/team.png" alt="" />TEAM</a>
 										</li>
 										<li class="premium-menu">
-												<a href="#"><img src="img/team.png" alt="" />DODAJ OSOBE</a>
-										</li>
-										<li>
-												<a href="#"><img src="img/wiadomosci.png" alt="" />WIADOMOŚCI</a>
+												<a href="#"><img src="img/dodaj.png" alt="" />DODAJ OSOBE</a>
 										</li>
 										<li>
 												<a href="#"><img src="img/profil.png" alt="" />PROFIL</a>
 										</li>
 										<li>
-												<a href="#"><img src="img/ustawienia.png" alt="" />USTAWIENIA</a>
-										</li>
-										<li>
-											<a href="logout.php" alt="" /><img src="img/ustawienia.png" alt="" />WYLOGUJ</a>
+											<a href="logout.php" alt="" /><img src="img/wyloguj.png" alt="" />WYLOGUJ</a>
 										</li>
 								</ul>
 						</div>
@@ -83,6 +77,15 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 
 <section>
 	<div class="content">
+
+					<div id="home">
+						<p>
+							welcome in dashbord!!!
+						</p>
+						<p>
+							chose something of menu 
+						</p>
+					</div>
 
 					<div id="id_produkt">
 						<div class="input-to-search">
@@ -217,7 +220,8 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 						</div>
 					</div>
 
-					<div id="team">
+					<div id="team" style="text-align:center;">
+						<img style="margin: 40px auto; display:block" src="img/bigTeam.png" alt="">
 						<div class="error-team">
 							<p>Nie masz wszystkich uprawinien do wyswietlenia danych zespolu</p>
 						</div>
@@ -286,7 +290,8 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 						<span id="okChange"></span>
 					</div>
 
-					<div id="profil-admin">
+					<div id="profil-admin" style="text-align:center;">
+						<img src="img/dodajBig.png" alt="">
 						<div class="form-daneAdd">
 							<form class="" method="post" id="addPresonAdmin">
 								<div class="imie-profil">
