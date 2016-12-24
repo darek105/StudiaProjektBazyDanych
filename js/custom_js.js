@@ -31,6 +31,11 @@ $(document).ready(function() {
         $('#id_produkt').siblings().hide();
     });
 
+    $('li').eq(2).on('click', (arguments) => {
+        $('#profil-admin-produkt').show();
+        $('#profil-admin-produkt').siblings().hide();
+    });
+
 
     $('li').eq(3).on('click', (arguments) => {
         $('#id_paczki').show();
@@ -532,6 +537,31 @@ $(document).ready(function() {
                 $('#okAddPreson').html('Dodano pracownika :)');
           } else {
             $('#okAddPreson').html('Coś poszło nie tak :(');
+          }
+        }
+      });
+
+
+    }
+
+    $("#addProductAdmin").validate({
+        submitHandler: addProductAdmin
+    });
+
+    function addProductAdmin() {
+      var data = $('#addProductAdmin').serialize();
+
+      $.ajax({
+        type: 'POST',
+        url: 'login_process.php',
+        data: data,
+
+        success: function (response) {
+
+          if (response == "OK") {
+                $('#okAddProduct').html('Dodano produkt :)');
+          } else {
+            $('#okAddProduct').html('Coś poszło nie tak :(');
           }
         }
       });

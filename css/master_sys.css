@@ -729,7 +729,63 @@ label.error {
   cursor: pointer;
 }
 
+.form-ProductAdd {
+  margin-top: 1px;
+  background: #1d2833;
+  width: 400px;
+  color: white;
+  height: 480px;
+  padding-top: 50px;
+  font-weight: 900;
+  font-family: 'NotoSans';
+}
+
+.form-ProductAdd form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 35px;
+  align-items: center;
+}
+
+.form-ProductAdd form div:nth-child(even) {
+  background: #041728;
+}
+
+.form-ProductAdd form div:nth-child(odd) {
+  background: #2C3D4E;
+}
+
+.form-ProductAdd form span {
+  display: block;
+  width: 106px;
+  text-align: right;
+  margin-right: 15px;
+}
+
+.form-ProductAdd form div + div {
+  margin-top: 15px;
+}
+
+.form-ProductAdd form input[type*="submit"] {
+  color: #2C3D4E;
+  background: #76C2AF;
+  font-family: 'NotoSans';
+  font-weight: 600;
+  width: 120px;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
 #okAddPreson {
+  margin: 15px auto;
+  text-align: center;
+  display: block;
+}
+
+#okAddProduct {
   margin: 15px auto;
   text-align: center;
   display: block;

@@ -83,7 +83,7 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 							welcome in dashbord!!!
 						</p>
 						<p>
-							chose something of menu 
+							chose something of menu
 						</p>
 					</div>
 
@@ -179,6 +179,53 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 					</div>
 
 
+					<div id="profil-admin-produkt" style="text-align:center;">
+						<img src="img/dodajBig.png" alt="">
+						<div class="form-ProductAdd">
+							<form class="" method="post" id="addProductAdmin">
+								<div class="indeks">
+									<span>INDEKS</span>
+									<input type="text" name="indeks" required>
+								</div>
+								<div class="nazwa">
+									<span>NAZWA</span>
+									<input type="text" name="nazwa" required>
+								</div>
+								<div class="cena">
+									<span>CENA</span>
+									<input type="text" name="cena" required>
+								</div>
+								<div class="rodzaj_ceny">
+									<span>RODZAJ CENY</span>
+									<input type="text" name="rodzaj_ceny" required>
+								</div>
+								<div class="kolor">
+									<span>KOLOR</span>
+									<input type="text" name="kolor" required>
+								</div>
+								<div class="rozmiar">
+									<span>ROZMIAR</span>
+									<input type="text" name="rozmiar" required>
+								</div>
+								<!-- <div class="pesel-profil">
+									<span>PESEL</span>
+									<input type="text" name="pesel" required> // id_productu
+								</div> -->
+								<div class="ilosc">
+									<span>ILOŚĆ</span>
+									<input type="text" name="ilosc" required>
+								</div>
+								<div class="oddzial">
+									<span>ODDZIAŁ</span>
+									<input type="text" name="oddzial" required>
+								</div>
+								<div class="submit">
+									<input type="submit" name="dodajProduct" value="DODAJ PRODUCT">
+								</div>
+							</form>
+							<span id="okAddProduct"></span>
+						</div>
+					</div>
 
 					<div id="id_paczki">
 						<div class="input-to-search">
