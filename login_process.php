@@ -491,10 +491,10 @@ if(isset($_POST['dodajProduct']))
 			$rodzaj_ceny = trim($_POST['rodzaj_ceny']);
 			$kolor = trim($_POST['kolor']);
 			$rozmiar = trim($_POST['rozmiar']);
-			$ilosc = trim($_POST['ilosc']);
-			$oddzial = $_POST['oddzial'];
+			$ilosc = intval($_POST['ilosc']);
+			$oddzial = trim($_POST['oddzial']);
 			$id_produktu = $indeks . $kolor .	$rozmiar;
-			$id_kupna = rand(100,1000) . $oddzial;
+			$id_kupna = strval(round(100,1000) . $oddzial);
 
 			$db_con = new PDO("mysql:host={$db_host};dbname={$db_name}",$db_user,$db_pass);
 
@@ -505,28 +505,14 @@ if(isset($_POST['dodajProduct']))
 
 			$stmt = $db_con->prepare("INSERT INTO asortyment (INDEKS, KOLOR, ROZMIAR, ID_PRODUKTU) VALUES (:indeks, :kolor, :rozmiar, :id_produktu)");
 			$stmt->execute(array(":indeks"=>$indeks, ':kolor'=>$kolor, ':rozmiar'=>$rozmiar, ':id_produktu'=>$id_produktu));
-			//
-			//
-			//TU JEST BŁAD BO PEWNIE RAND TO FLOAT A NIE INT
-			// $stmt = $db_con->prepare("INSERT INTO lokalizacja (ID_KUPNA, ID_ODDZIAŁU, ID_PRODUKTU, ILOŚĆ) VALUES (:id_kupna, :id_oddzialu, :id_produktu, ilosc)");
-			// $stmt->execute(array(":id_kupna"=>$id_kupna, ':id_oddzialu'=>$oddzial, ':id_produktu'=>$id_produktu, ':ilosc'=>$ilosc));
 
 
+			$stmt1 = $db_con->prepare("INSERT INTO lokalizacja (ID_KUPNA, ID_ODDZIAŁU, ID_PRODUKTU, ILOŚĆ) VALUES (:id_kupna, :id_oddzialu, :id_produktu, :ilosc)");
+			$stmt1->execute(array(":id_kupna"=>$id_kupna, ':id_oddzialu'=>$oddzial, ':id_produktu'=>$id_produktu, ':ilosc'=>$ilosc));
 
 
-			// $stmt1 = $db_con->prepare("SELECT * FROM pracownicy WHERE PESEL=:pesel");
-			// $stmt1->execute(array(":pesel"=>$pesel));
-			// $row1 = $stmt1->fetch(PDO::FETCH_ASSOC);
-			// $count1 = $stmt1->rowCount();
-			//
-			if(1){
+				echo "OK"; //JESLI COS POJDZIE NIE TAK TO TRY CATCH ZWROCI BLAD
 
-				echo "OK"; // log in
-			}
-			else{
-
-				echo "NIE DODANO"; // wrong details
-			}
 
 
 
