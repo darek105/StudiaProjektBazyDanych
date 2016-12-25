@@ -363,12 +363,12 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 								<div class="submit">
 									<label for="">Czy na pewno chesz usunąc tą osobe?</label>
 									<div class="check">
-										<input type="submit" name="dodajProduct" value="TAK">
+										<input type="submit" name="yesDelete" value="TAK">
 										<button type="button" id="noDelete" name="Nie">NIE</button>
 									</div>
 								</div>
 							</form>
-							<span id="okAddProduct"></span>
+							<span id="okDeletePerson"></span>
 						</div>
 					</div>
 

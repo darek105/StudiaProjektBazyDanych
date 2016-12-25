@@ -157,7 +157,11 @@ $(document).ready(function() {
     $('#noDelete').on('click', (arguments) => {
       $('.YesOrNot').show();
       $('#team-delete .submit').hide();
+      $('#team-delete input[type=text]').each(function(index, el) {
+          $(this).val("");
+      });
     });
+
 
     function showMore() {
 
@@ -586,10 +590,38 @@ $(document).ready(function() {
     }
 
 
-    $("#addProductAdmin").validate({
-        submitHandler: addProductAdmin
+    $("#deletePerson").validate({
+        submitHandler: deletePerson
     });
 
+    function deletePerson() {
+      var data = $('#deletePerson').serialize();
 
+      $.ajax({
+        type: 'POST',
+        url: 'login_process.php',
+        data: data,
+
+        success: function (response) {
+
+          // $('#team-delete .submit').css('height', '25');
+
+          $('.YesOrNot').show();
+          $('#team-delete .submit').hide();
+          $('#team-delete input[type=text]').each(function(index, el) {
+              $(this).val("");
+          });
+
+          if (response == "OK") {
+                $('#okDeletePerson').html('Usunięto osobę :)');
+
+          } else {
+            $('#okDeletePerson').html('Coś poszło nie tak :(');
+          }
+        }
+      });
+
+
+    }
 
 }); //koniec ready

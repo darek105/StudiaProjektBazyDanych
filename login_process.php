@@ -523,4 +523,31 @@ if(isset($_POST['dodajProduct']))
 }
 
 
+if(isset($_POST['yesDelete']))
+{
+	try
+	{
+
+			$imie = trim($_POST['imie']);
+			$nazwisko = trim($_POST['nazwisko']);
+			$pesel = trim($_POST['pesel']);
+
+			$db_con = new PDO("mysql:host={$db_host};dbname={$db_name}",$db_user,$db_pass);
+
+			$db_con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$stmt = $db_con->prepare("DELETE FROM pracownicy WHERE PESEL=:pesel");
+			$stmt->execute(array(":pesel"=>$pesel));
+
+				echo "OK"; //JESLI COS POJDZIE NIE TAK TO TRY CATCH ZWROCI BLAD
+
+
+
+
+	}
+	catch(PDOException $e){
+		echo $e->getMessage();
+	}
+}
+
+
 ?>
