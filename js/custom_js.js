@@ -13,6 +13,7 @@ $('.team-details').hide();
 $('.content').children().hide();
 $('#home').show();
 $('#profil-admin').hide();
+$('#team-delete .submit').hide();
 
 $(document).ready(function() {
 
@@ -42,17 +43,22 @@ $(document).ready(function() {
         $('#id_paczki').siblings().hide();
     });
 
-    $('li').eq(5).on('click', (arguments) => {
+    $('li').eq(4).on('click', (arguments) => {
         $('#team').show();
         $('#team').siblings().hide();
     });
 
-    $('li').eq(7).on('click', (arguments) => {
+    $('li').eq(6).on('click', (arguments) => {
+        $('#team-delete').show();
+        $('#team-delete').siblings().hide();
+    });
+
+    $('li').eq(8).on('click', (arguments) => {
         $('#profil').show();
         $('#profil').siblings().hide();
     });
 
-    $('li').eq(6).on('click', (arguments) => {
+    $('li').eq(5).on('click', (arguments) => {
         $('#profil-admin').show();
         $('#profil-admin').siblings().hide();
     });
@@ -141,6 +147,16 @@ $(document).ready(function() {
       /* Act on the event */
       var selectChangeValue = $(this).val().toLowerCase();
       $('#formToChangeDane input').eq(0).attr('name', selectChangeValue);
+    });
+
+    $('#usunOsobe').on('click', (arguments) => {
+      $('.YesOrNot').hide();
+      $('#team-delete .submit').show();
+    });
+
+    $('#noDelete').on('click', (arguments) => {
+      $('.YesOrNot').show();
+      $('#team-delete .submit').hide();
     });
 
     function showMore() {
@@ -568,6 +584,11 @@ $(document).ready(function() {
 
 
     }
+
+
+    $("#addProductAdmin").validate({
+        submitHandler: addProductAdmin
+    });
 
 
 

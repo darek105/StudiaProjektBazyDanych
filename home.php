@@ -54,14 +54,14 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 										<li>
 												<a href="#"><img src="img/paczki.png" alt="" />PACZKI</a>
 										</li>
-										<li class="premium-menu">
-												<a href="#"><img src="img/dodaj.png" alt="" />DODAJ PACZKE</a>
-										</li>
 										<li >
 												<a href="#"><img src="img/team.png" alt="" />TEAM</a>
 										</li>
 										<li class="premium-menu">
 												<a href="#"><img src="img/dodaj.png" alt="" />DODAJ OSOBE</a>
+										</li>
+										<li class="premium-menu">
+												<a href="#"><img src="img/dodaj.png" alt="" />USUŃ OSOBE</a>
 										</li>
 										<li>
 												<a href="#"><img src="img/profil.png" alt="" />PROFIL</a>
@@ -315,6 +315,10 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 							</div>
 
 						</div>
+
+
+
+
 						<div class="zmien-dane">
 							<div class="PokazFormDoZmiany">
 								<button type="button" name="button">ZMIEŃ DANE</button>
@@ -335,6 +339,37 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 							</div>
 						</div>
 						<span id="okChange"></span>
+					</div>
+
+
+					<div id="team-delete" style="text-align:center;">
+						<div class="form-DeletePerson">
+							<form class="" method="post" id="deletePerson">
+								<div class="indeks">
+									<span>IMIĘ</span>
+									<input type="text" name="imie" required>
+								</div>
+								<div class="nazwa">
+									<span>NAZWISKO</span>
+									<input type="text" name="nazwisko" required>
+								</div>
+								<div class="cena">
+									<span>PESEL</span>
+									<input type="text" name="pesel" required>
+								</div>
+								<div class="YesOrNot">
+									<button type="button" id="usunOsobe" name="usunOsobe">USUŃ</button>
+								</div>
+								<div class="submit">
+									<label for="">Czy na pewno chesz usunąc tą osobe?</label>
+									<div class="check">
+										<input type="submit" name="dodajProduct" value="TAK">
+										<button type="button" id="noDelete" name="Nie">NIE</button>
+									</div>
+								</div>
+							</form>
+							<span id="okAddProduct"></span>
+						</div>
 					</div>
 
 					<div id="profil-admin" style="text-align:center;">

@@ -800,3 +800,79 @@ label.error {
   text-transform: uppercase;
   margin-top: 100px;
 }
+
+#team-delete {
+  margin-top: 100px;
+  background: #1d2833;
+  width: 400px;
+  color: white;
+  height: 300px;
+  padding-top: 50px;
+  font-weight: 900;
+  font-family: 'NotoSans';
+}
+
+#team-delete form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 35px;
+  align-items: center;
+}
+
+#team-delete form div:nth-child(even) {
+  background: #041728;
+}
+
+#team-delete form div:nth-child(odd) {
+  background: #2C3D4E;
+}
+
+#team-delete form span {
+  display: block;
+  width: 106px;
+  text-align: right;
+  margin-right: 15px;
+}
+
+#team-delete form div + div {
+  margin-top: 15px;
+}
+
+#team-delete form input[type*="submit"] {
+  color: #2C3D4E;
+  background: #76C2AF;
+  font-family: 'NotoSans';
+  font-weight: 600;
+  width: 120px;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#team-delete form button {
+  color: #2C3D4E;
+  background: #76C2AF;
+  font-family: 'NotoSans';
+  font-weight: 600;
+  width: 120px;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+#team-delete form .submit {
+  display: flex;
+  flex-direction: column;
+  height: 90px;
+}
+
+#team-delete form .submit .check {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  background: #2C3D4E;
+}
