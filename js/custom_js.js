@@ -53,7 +53,7 @@ $(document).ready(function() {
         $('#team-delete').siblings().hide();
     });
 
-    $('li').eq(8).on('click', (arguments) => {
+    $('li').eq(7).on('click', (arguments) => {
         $('#profil').show();
         $('#profil').siblings().hide();
     });

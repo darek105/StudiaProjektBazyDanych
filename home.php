@@ -173,7 +173,7 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 								      echo "<td>" . $row['TELEFON'] . "</td>";
 								      echo "<td>" . $row['ID_ODDZIAŁU'] . "</td>";
 								      echo "</tr>"; -->
-								  </table>";
+								  </table>
 							</div>
 						</div>
 					</div>
