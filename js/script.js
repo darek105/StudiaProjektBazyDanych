@@ -35,7 +35,7 @@ $('document').ready(function() {
         $.ajax({
 
             type: 'POST',
-            url: 'login_process.php',
+            url: 'packPhpAjax.php',
             data: data,
             beforeSend: function() {
                 $("#error").fadeOut();
@@ -46,7 +46,7 @@ $('document').ready(function() {
                 if (response == "ok") {
                     $("#submit span").show();
                     $("#submit").html('<img style="margin-top:20px;" src="img/btn-ajax-loader.gif" />');
-                    setTimeout(' window.location.href = "home.php"; ', 3000);
+                    setTimeout(' window.location.href = "dashboard.php"; ', 3000);
                 } else {
                     $("#submit span").hide();
                     $("#submit input").show();

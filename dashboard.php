@@ -49,7 +49,7 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
                             <li>
                                 <a href="#"><img src="img/product.png" alt="" />PRODUKTY</a>
                             </li>
-                            <li class="premium-menu">
+                            <li class="premium-menu"w>
                                 <a href="#"><img src="img/dodaj.png" alt="" />DODAJ PRODUKTY</a>
                             </li>
                             <li>
@@ -407,13 +407,11 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
                             </div>
                             <div class="submit">
                                 <input type="submit" name="dodajPracownika" value="DODAJ OSOBE">
-                            </div>
+														</div>
                         </form>
                         <span id="okAddPreson"></span>
                     </div>
                 </div>
-
-
 
             </div>
         </section>
@@ -422,8 +420,7 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
         <script type="text/javascript" src="js/validation.min.js"></script>
         <script type="text/javascript">
             function checkPreson() {
-                var count = '<?php echo $row['
-                TELEFON ']; ?>'
+                var count = '<?php echo $row['TELEFON']; ?>'
 
                 var specialMore = ['661124460', '519772034', '608726669'];
 
