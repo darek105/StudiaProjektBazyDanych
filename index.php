@@ -10,7 +10,7 @@ session_start();
 
 if(isset($_SESSION['user_session'])!="")
 {
-	header("Location: home.php");
+	header("Location: dashboard.php");
 }
 
 ?>

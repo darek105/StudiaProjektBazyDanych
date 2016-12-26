@@ -63,10 +63,6 @@ $(document).ready(function() {
         $('#profil-admin').siblings().hide();
     });
 
-    // $('li').on('click', (arguments) => {
-    //     $('#profil-admin').show();
-    //     $('#profil-admin').siblings().hide();
-    // });
 
     $('.li-drop').on('click', (arguments) => {
         $('.li-drop ul').toggle(function() {
@@ -103,15 +99,15 @@ $(document).ready(function() {
     $('.li-drop-3 a').on('click', (arguments) => {
         $('.li-drop-3 ul').toggle(function() {
             $('.li-drop-3 ul li').slideDown();
-          }, function() {
+        }, function() {
             $('.li-drop-3 ul li').slideDown('fast');
         });
     });
 
     if (!checkPreson()) {
-      $('li').eq(2).hide();
-      $('li').eq(4).hide();
-      $('li').eq(6).hide();
+        $('li').eq(2).hide();
+        $('li').eq(4).hide();
+        $('li').eq(6).hide();
     }
 
     $('#zapas-form input').on('click', (arguments) => {
@@ -121,13 +117,11 @@ $(document).ready(function() {
                 var count = $(this).text();
                 var kolor = $("#id_produkt2").val();
                 var rozmiar = $("#id_produkt3").val();
-                // console.log(count);
-                // console.log(id_produktu);
                 if (count == kolor) {
                     count1 = $(this).next().text();
-                    // console.log("KOLOR" + count1);
+
                     if (count1 == rozmiar) {
-                        // console.log(index);
+
                         $('#model-tab tr').eq(index).children().css('font-weight', '800');
                         $('#model-tab tr').eq(index).children().css('color', '#60a2e5');
                     }
@@ -138,28 +132,28 @@ $(document).ready(function() {
     });
 
     $(".PokazFormDoZmiany").on('click', (arguments) => {
-      $(".PokazFormDoZmiany").css('display', 'none');
-      $(".zmien-dane select").css('display', 'flex');
-      $(".zmien-dane form").css('display', 'flex');
+        $(".PokazFormDoZmiany").css('display', 'none');
+        $(".zmien-dane select").css('display', 'flex');
+        $(".zmien-dane form").css('display', 'flex');
     });
 
     $('.dane').change(function(event) {
-      /* Act on the event */
-      var selectChangeValue = $(this).val().toLowerCase();
-      $('#formToChangeDane input').eq(0).attr('name', selectChangeValue);
+        /* Act on the event */
+        var selectChangeValue = $(this).val().toLowerCase();
+        $('#formToChangeDane input').eq(0).attr('name', selectChangeValue);
     });
 
     $('#usunOsobe').on('click', (arguments) => {
-      $('.YesOrNot').hide();
-      $('#team-delete .submit').show();
+        $('.YesOrNot').hide();
+        $('#team-delete .submit').show();
     });
 
     $('#noDelete').on('click', (arguments) => {
-      $('.YesOrNot').show();
-      $('#team-delete .submit').hide();
-      $('#team-delete input[type=text]').each(function(index, el) {
-          $(this).val("");
-      });
+        $('.YesOrNot').show();
+        $('#team-delete .submit').hide();
+        $('#team-delete input[type=text]').each(function(index, el) {
+            $(this).val("");
+        });
     });
 
 
@@ -167,7 +161,7 @@ $(document).ready(function() {
 
 
         if (checkPreson()) {
-            // $('#profil-admin').show();
+
             $('.error-team').hide();
         } else {
             $('#team-tab tr').each(function(index, el) {
@@ -232,13 +226,6 @@ $(document).ready(function() {
     function submitFormSearch() {
         var id_produktu = "";
         $('#content-id-produkt').slideDown('fast');
-        // $("#id_produkt1").blur(function(event) {
-        //   /* Act on the event */
-        //   var id_produktu = "";
-        //   id_produktu = $("#id_produkt1").text();
-        // });
-        // console.log(id_produktu);
-        // $("#id_produkt4").html(id_produktu);
         if ($("#id_produkt3").val() != "" & $("#id_produkt2").val() != "") {
             id_produktu = $("#id_produkt1").val();
             id_produktu += $("#id_produkt2").val();
@@ -255,12 +242,8 @@ $(document).ready(function() {
         $.ajax({
 
             type: 'POST',
-            url: 'login_process.php',
+            url: 'packPhpAjax.php',
             data: data,
-            // beforeSend: function() {
-            //     $("#error").fadeOut();
-            //     $("#submit").html('<span class=""></span> &nbsp; sending ...');
-            // },
             success: function(response) {
 
                 $('.tab-produkt div').each(function(index, el) {
@@ -292,11 +275,7 @@ $(document).ready(function() {
         return false;
     }
 
-    // $('.tab-produkt-model').on('submit', (arguments) => {
-    //   event.preventDefault();
-    //   $(this).slideDown('fast');
-    //   modelShow();
-    // });
+
 
 
     $("#model-form").validate({
@@ -306,13 +285,6 @@ $(document).ready(function() {
     function modelShow() {
         var id_produktu = "";
         $('.tab-produkt-model').slideDown('fast');
-        // $("#id_produkt1").blur(function(event) {
-        //   /* Act on the event */
-        //   var id_produktu = "";
-        //   id_produktu = $("#id_produkt1").text();
-        // });
-        // console.log(id_produktu);
-        // $("#id_produkt4").html(id_produktu);
         id_produktu = $("#id_produkt1").val();
         $("#id_produkt5").val($("#id_produkt1").val());
         id_produktu += $("#id_produkt2").val();
@@ -327,12 +299,8 @@ $(document).ready(function() {
         $.ajax({
 
             type: 'POST',
-            url: 'login_process.php',
+            url: 'packPhpAjax.php',
             data: data,
-            // beforeSend: function() {
-            //     $("#error").fadeOut();
-            //     $("#submit").html('<span class=""></span> &nbsp; sending ...');
-            // },
             success: function(response) {
 
                 var obj = JSON.parse(response);
@@ -373,12 +341,8 @@ $(document).ready(function() {
         $.ajax({
 
             type: 'POST',
-            url: 'login_process.php',
+            url: 'packPhpAjax.php',
             data: data,
-            // beforeSend: function() {
-            //     $("#error").fadeOut();
-            //     $("#submit").html('<span class=""></span> &nbsp; sending ...');
-            // },
             success: function(response) {
 
                 var obj = JSON.parse(response);
@@ -418,12 +382,8 @@ $(document).ready(function() {
         $.ajax({
 
             type: 'POST',
-            url: 'login_process.php',
+            url: 'packPhpAjax.php',
             data: data,
-            // beforeSend: function() {
-            //     $("#error").fadeOut();
-            //     $("#submit").html('<span class=""></span> &nbsp; sending ...');
-            // },
             success: function(response) {
 
                 var obj = JSON.parse(response);
@@ -464,12 +424,8 @@ $(document).ready(function() {
         $.ajax({
 
             type: 'POST',
-            url: 'login_process.php',
+            url: 'packPhpAjax.php',
             data: data,
-            // beforeSend: function() {
-            //     $("#error").fadeOut();
-            //     $("#submit").html('<span class=""></span> &nbsp; sending ...');
-            // },
             success: function(response) {
 
                 var obj = JSON.parse(response);
@@ -506,25 +462,22 @@ $(document).ready(function() {
         $.ajax({
 
             type: 'POST',
-            url: 'login_process.php',
+            url: 'packPhpAjax.php',
             data: data,
-            // beforeSend: function() {
-            //     $("#error").fadeOut();
-            //     $("#submit").html('<span class=""></span> &nbsp; sending ...');
-            // },
+
             success: function(response) {
 
                 var obj = JSON.parse(response);
                 if (obj.indeks != "") {
-                            $('.imie-profil').children().eq(1).html(obj.imie);
-                            $('.user h1').html(obj.imie);
-                            $('.nazwisko-profil').children().eq(1).html(obj.nazwisko);
-                            $('.stanowisko-profil').children().eq(1).html(obj.stanowisko);
-                            $('.telefon-profil').children().eq(1).html(obj.telefon);
-                            $('.haslo-profil').children().eq(1).html(obj.haslo);
+                    $('.imie-profil').children().eq(1).html(obj.imie);
+                    $('.user h1').html(obj.imie);
+                    $('.nazwisko-profil').children().eq(1).html(obj.nazwisko);
+                    $('.stanowisko-profil').children().eq(1).html(obj.stanowisko);
+                    $('.telefon-profil').children().eq(1).html(obj.telefon);
+                    $('.haslo-profil').children().eq(1).html(obj.haslo);
 
                     $('#okChange').html('Zmiana przebiegła pomyślnie !!!')
-                    // $('#model-tab').append('<tr><td>' +  obj.indeks + '</td></tr><td>' +  obj.kolor + '</td><td>' +  obj.rozmiar + '</td><td>' +  obj.ilosc + '</td></tr>')
+                        // $('#model-tab').append('<tr><td>' +  obj.indeks + '</td></tr><td>' +  obj.kolor + '</td><td>' +  obj.rozmiar + '</td><td>' +  obj.ilosc + '</td></tr>')
 
                 } else {
 
@@ -544,22 +497,22 @@ $(document).ready(function() {
     });
 
     function addPresonAdmin() {
-      var data = $('#addPresonAdmin').serialize();
+        var data = $('#addPresonAdmin').serialize();
 
-      $.ajax({
-        type: 'POST',
-        url: 'login_process.php',
-        data: data,
+        $.ajax({
+            type: 'POST',
+            url: 'packPhpAjax.php',
+            data: data,
 
-        success: function (response) {
+            success: function(response) {
 
-          if (response == "OK") {
-                $('#okAddPreson').html('Dodano pracownika :)');
-          } else {
-            $('#okAddPreson').html('Coś poszło nie tak :(');
-          }
-        }
-      });
+                if (response == "OK") {
+                    $('#okAddPreson').html('Dodano pracownika :)');
+                } else {
+                    $('#okAddPreson').html('Coś poszło nie tak :(');
+                }
+            }
+        });
 
 
     }
@@ -569,22 +522,22 @@ $(document).ready(function() {
     });
 
     function addProductAdmin() {
-      var data = $('#addProductAdmin').serialize();
+        var data = $('#addProductAdmin').serialize();
 
-      $.ajax({
-        type: 'POST',
-        url: 'login_process.php',
-        data: data,
+        $.ajax({
+            type: 'POST',
+            url: 'packPhpAjax.php',
+            data: data,
 
-        success: function (response) {
+            success: function(response) {
 
-          if (response == "OK") {
-                $('#okAddProduct').html('Dodano produkt :)');
-          } else {
-            $('#okAddProduct').html('Coś poszło nie tak :(');
-          }
-        }
-      });
+                if (response == "OK") {
+                    $('#okAddProduct').html('Dodano produkt :)');
+                } else {
+                    $('#okAddProduct').html('Coś poszło nie tak :(');
+                }
+            }
+        });
 
 
     }
@@ -595,31 +548,29 @@ $(document).ready(function() {
     });
 
     function deletePerson() {
-      var data = $('#deletePerson').serialize();
+        var data = $('#deletePerson').serialize();
 
-      $.ajax({
-        type: 'POST',
-        url: 'login_process.php',
-        data: data,
+        $.ajax({
+            type: 'POST',
+            url: 'packPhpAjax.php',
+            data: data,
 
-        success: function (response) {
+            success: function(response) {
 
-          // $('#team-delete .submit').css('height', '25');
+                $('.YesOrNot').show();
+                $('#team-delete .submit').hide();
+                $('#team-delete input[type=text]').each(function(index, el) {
+                    $(this).val("");
+                });
 
-          $('.YesOrNot').show();
-          $('#team-delete .submit').hide();
-          $('#team-delete input[type=text]').each(function(index, el) {
-              $(this).val("");
-          });
+                if (response == "OK") {
+                    $('#okDeletePerson').html('Usunięto osobę :)');
 
-          if (response == "OK") {
-                $('#okDeletePerson').html('Usunięto osobę :)');
-
-          } else {
-            $('#okDeletePerson').html('Coś poszło nie tak :(');
-          }
-        }
-      });
+                } else {
+                    $('#okDeletePerson').html('Coś poszło nie tak :(');
+                }
+            }
+        });
 
 
     }
