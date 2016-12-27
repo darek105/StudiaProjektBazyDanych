@@ -32,7 +32,7 @@ if(isset($_SESSION['user_session'])!="")
 <section>
 		<div class="wrapper">
 				<div class="title">
-						<h1>PANEL LOGIN</h1>
+						<h1>PANEL LOGINa</h1>
 				</div>
 				<div class="border ">
 					<div class="form effect ">
